@@ -5,7 +5,7 @@ with open('listl.txt', 'r') as fp:
     data = fp.read().split('\n')
     cordinates = [(42, 1457), (364, 1457), (676, 1457), (987, 1457)]
 
-    for i in range(0, 8, 4):
+    for i in range(0, len(data), 4):
         img1 = Image.open('bhk-1.png')
         s1 = data[i:i + 4]
         qrcode.QRCode(version=1, border=2, box_size=2)
